@@ -1,3 +1,5 @@
 <?php
-    echo 'test';
+require('./app/controllers/front.php');
+
+home();
 ?>
