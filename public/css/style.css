@@ -11,4 +11,34 @@ body {
     margin-top: 8%;
     text-align: center;
     font-size: 4em;
+    opacity: 0.8;
+}
+
+.title_welcome .sub {
+    font-size: 0.4em;
+    margin-top: 2px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.btn_group {
+    text-align: center;
+    margin: auto;
+    margin-top: 13%;
+}
+
+.btn_group button{
+    text-align: center;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.btn_group span {
+    font-size: 22px;
+}
+
+@media all and (max-width: 600px) {
+    .title_welcome {
+        font-size: 2.5em;
+    }
 }
