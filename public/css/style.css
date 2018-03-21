@@ -37,8 +37,46 @@ body {
     font-size: 22px;
 }
 
+.title_left {
+    margin-left: 60px;
+    margin-top: 40px;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.chapters {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.chapters .chapter {
+    margin-top: 20px;
+}
+
+.chapter button {
+    width: 80px;
+}
+
+.chapter .date {
+    padding-left: 8px;
+    padding-top: 8px;
+    opacity: 0.5;
+    float: right;
+}
+
+.paginations {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 @media all and (max-width: 600px) {
     .title_welcome {
         font-size: 2.5em;
+    }
+
+    .chapters {
+        width: 100%;
     }
 }
