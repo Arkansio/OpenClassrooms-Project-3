@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title><?= $title ?></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/projet3/public/css/bootstrap.min.css" rel="stylesheet" /> 
         <link href="/projet3/public/css/style.css" rel="stylesheet" /> 
         <link rel="stylesheet" href="/projet3/public/css/animate.css">
