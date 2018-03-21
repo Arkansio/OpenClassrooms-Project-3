@@ -24,7 +24,7 @@
 <div class="paginations">
     <div class="btn-group mr-2" role="group" aria-label="First group">
         <?php for ($i = 1; $i <= 6; $i++): ?>
-            <button type="button" class="btn btn-secondary"><?php echo $i ?></button>
+            <button type="button" class="btn btn-dark"><?php echo $i ?></button>
         <?php endfor; ?>
     </div>
 </div>
