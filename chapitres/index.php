@@ -1,6 +1,6 @@
 <?php
-require('config.php');
+require('../config.php');
 require(APP_ROOT . 'app/controllers/front.php');
 
-home();
+chapitres();
 ?>

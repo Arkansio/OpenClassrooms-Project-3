@@ -2,12 +2,12 @@
 
 function home()
 {
-    require('./app/views/home.php');
+    require(APP_ROOT . 'app/views/home.php');
 }
 
 function chapitres()
 {
-    require('./app/views/chapitres.php');
+    require(APP_ROOT . 'app/views/chapitres.php');
 }
 
 ?>
