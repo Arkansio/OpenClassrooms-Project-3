@@ -2,11 +2,11 @@
 
 <?php ob_start(); ?>
 
-<div class="title_left">
+<div class="title_left animated bounceInLeft">
     Chapitres
 </div>
 
-<div class="row chapters">
+<div class="row chapters animated fadeIn">
     <?php for ($i = 1; $i <= 6; $i++): ?>
         <div class="col-md-4 chapter">
             <div class="card text-white bg-dark mw-100">
@@ -21,7 +21,7 @@
     <?php endfor; ?>
 </div>
 
-<div class="paginations">
+<div class="paginations animated slideInUp">
     <div class="btn-group mr-2" role="group" aria-label="First group">
         <?php for ($i = 1; $i <= 6; $i++): ?>
             <button type="button" class="btn btn-dark"><?php echo $i ?></button>
