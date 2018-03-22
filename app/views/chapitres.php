@@ -9,7 +9,7 @@
 <div class="row chapters">
     <?php for ($i = 1; $i <= 6; $i++): ?>
         <div class="col-md-4 chapter">
-            <div class="card text-white bg-dark mw-100" style="max-width: 200px;">
+            <div class="card text-white bg-dark mw-100">
                 <div class="card-header">Chapitre <?php echo $i ?></div>
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
