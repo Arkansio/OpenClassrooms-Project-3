@@ -2,5 +2,6 @@
 require('../config.php');
 require(APP_ROOT . 'app/controllers/front.php');
 
-chapitres();
+$front = new front;
+$front->chapitres();
 ?>

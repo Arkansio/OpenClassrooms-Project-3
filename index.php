@@ -2,5 +2,6 @@
 require('config.php');
 require(APP_ROOT . 'app/controllers/front.php');
 
-home();
+$front = new front;
+$front->home();
 ?>

@@ -1,13 +1,15 @@
 <?php
-
-function home()
+class front
 {
-    require(APP_ROOT . 'app/views/home.php');
-}
-
-function chapitres()
-{
-    require(APP_ROOT . 'app/views/chapitres.php');
+    function home()
+    {
+        require(APP_ROOT . 'app/views/home.php');
+    }
+    
+    function chapitres()
+    {
+        require(APP_ROOT . 'app/views/chapitres.php');
+    }
 }
 
 ?>
