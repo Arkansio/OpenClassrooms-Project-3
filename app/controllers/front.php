@@ -10,6 +10,11 @@ class front
     {
         require(APP_ROOT . 'app/views/chapitres.php');
     }
+
+    function chapitre()
+    {
+        require(APP_ROOT . 'app/views/chapitre.php');
+    }
 }
 
 ?>
