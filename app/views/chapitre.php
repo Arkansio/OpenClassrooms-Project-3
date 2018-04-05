@@ -7,14 +7,14 @@ $content = 'test';
 <?php ob_start(); ?>
 
 <div class="title_left animated bounceInLeft">
-    <?php echo $chapterTitle; ?>
+    <?php echo $data['title']; ?>
 </div>
 
 <div class="chapterContent">
     <div class="contentBody">
-        <?php echo $content; ?>
+        <?php echo $data['content']; ?>
     </div>
-    <div class="date">2017-05-21</div>
+    <div class="date"><?php echo $data['date']; ?></div>
 
     <div class="comments">
         <div class="title"> Commentaires </div>
