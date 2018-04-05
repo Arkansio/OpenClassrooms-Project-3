@@ -1,7 +1,7 @@
 <?php
 require(APP_ROOT . 'app/models/PostManager.php');
 
-class front
+class Front
 {
     private $postManager;
     function __construct() {
