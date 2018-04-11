@@ -12,7 +12,7 @@
             <div class="card text-white bg-dark mw-100">
                 <div class="card-header"><?php echo $element['title']; ?></div>
                 <div class="card-body">
-                    <p class="card-text">   <?php echo $element['content']; ?>  </p>
+                    <p class="card-text">   <?php echo $element['SUBSTRING(content, 1, 120)']; ?>  </p>
                     <a href="chapitre/?id=<?php echo $element['id']; ?>">
                         <button type="button" class="btn btn-outline-secondary">Lire</button>
                     </a>
