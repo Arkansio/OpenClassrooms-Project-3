@@ -25,8 +25,14 @@
 
 <div class="paginations animated slideInUp">
     <div class="btn-group mr-2" role="group" aria-label="First group">
-        <?php for ($i = 1; $i <= 6; $i++): ?>
-            <button type="button" class="btn btn-dark"><?php echo $i ?></button>
+        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <?php if ($i === $actualIndex + 1): ?>
+                <button type="button" class="btn btn-dark active"><?php echo $i ?></button>
+            <?php else: ?>
+                <a href="/projet3/chapitres?i=<?php echo $i; ?>">
+                    <button type="button" class="btn btn-dark"><?php echo $i ?></button>
+                </a>
+            <?php endif; ?>
         <?php endfor; ?>
     </div>
 </div>

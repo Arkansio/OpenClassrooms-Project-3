@@ -12,9 +12,14 @@ class Front
         require(APP_ROOT . 'app/views/home.php');
     }
     
-    function chapitres()
+    function chapitres($GET)
     {
-        $data = $this->postManager->getPosts(0, 6);
+        $actualIndex = 0;
+        if(isset($_GET['i']))
+            $actualIndex = $_GET['i'] - 1;
+        $totalPosts = $this->postManager->countPosts()['COUNT(id)'];
+        $totalPages = ceil($totalPosts / 6);
+        $data = $this->postManager->getPosts($actualIndex * 6, $actualIndex * 6 + 6);
         require(APP_ROOT . 'app/views/chapitres.php');
     }
 

@@ -21,6 +21,13 @@ class PostManager
         $req->execute();
         return $req;
     }
+
+    function countPosts() {
+        $this->initConnection();
+        $req = $this->bdd->prepare('SELECT COUNT(id) FROM billets');
+        $req->execute();
+        return $req->fetch();
+    }
 }
 
 ?>
