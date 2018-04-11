@@ -13,6 +13,14 @@ class PostManager
         $req->execute(array($id));
         return $req->fetch();
     }
+    function getPosts($from, $to) {
+        $this->initConnection();
+        $req = $this->bdd->prepare('SELECT id, title, content, date FROM billets LIMIT ?, ?');
+        $req->bindParam(1, $from, PDO::PARAM_INT);
+        $req->bindParam(2, $to, PDO::PARAM_INT);
+        $req->execute();
+        return $req;
+    }
 }
 
 ?>

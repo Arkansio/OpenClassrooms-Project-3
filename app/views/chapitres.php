@@ -7,18 +7,20 @@
 </div>
 
 <div class="row chapters animated fadeIn">
-    <?php for ($i = 1; $i <= 6; $i++): ?>
+    <?php while ($element = $data->fetch()): ?>
         <div class="col-md-4 chapter">
             <div class="card text-white bg-dark mw-100">
-                <div class="card-header">Chapitre <?php echo $i ?></div>
+                <div class="card-header"><?php echo $element['title']; ?></div>
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button type="button" class="btn btn-outline-secondary">Lire</button>
-                    <p class="card-text date">13 janvier 2018</p>
+                    <p class="card-text">   <?php echo $element['content']; ?>  </p>
+                    <a href="chapitre/?id=<?php echo $element['id']; ?>">
+                        <button type="button" class="btn btn-outline-secondary">Lire</button>
+                    </a>
+                    <p class="card-text date">  <?php echo $element['date']; ?> </p>
                 </div>
             </div>
         </div>
-    <?php endfor; ?>
+    <?php endwhile; ?>
 </div>
 
 <div class="paginations animated slideInUp">

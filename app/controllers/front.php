@@ -14,6 +14,7 @@ class Front
     
     function chapitres()
     {
+        $data = $this->postManager->getPosts(0, 6);
         require(APP_ROOT . 'app/views/chapitres.php');
     }
 
