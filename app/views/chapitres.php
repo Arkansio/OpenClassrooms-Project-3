@@ -8,7 +8,7 @@
 
 <div class="row chapters animated fadeIn">
     <?php while ($element = $data->fetch()): ?>
-        <div class="col-md-4 chapter">
+        <div class="col-md-6 chapter">
             <div class="card text-white bg-dark mw-100">
                 <div class="card-header"><?php echo htmlspecialchars($element['title']); ?></div>
                 <div class="card-body">
