@@ -32,7 +32,9 @@ $content = 'test';
                 <button type="button" class="btn btn-info">Tous les commentaires</button>
             </div>
             <div class="basicForm bottom">
-                <button type="button" class="btn btn-danger">Déconnexion</button>
+                <a href="/projet3/login/logout.php">
+                    <button type="button" class="btn btn-danger">Déconnexion</button>
+                </a>
             </div>
         </div>
     </div>

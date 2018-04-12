@@ -40,6 +40,11 @@ class Backend
             $this->showLogin();
         }
     }
+
+    public function logout() {
+        session_destroy();
+        header('Location: /projet3');
+    }
 }
 
 ?>
