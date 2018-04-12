@@ -23,7 +23,7 @@ class Backend
     private function testLogin($password) {
         if($password === 'mdp') {
             $_SESSION['isLogged'] = 1;
-            header('Location: /projet3/');
+            header('Location: /projet3/admin');
         } else {
             $this->showLogin();
         }
