@@ -163,6 +163,26 @@ div.container.admin .basicForm .welcome {
     text-align: left;
 }
 
+.editor {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.editor button {
+    margin-top: 20px;
+    float: right;
+}
+
+.editor .submit {
+    height: 60px;
+}
+
+.editor .title {
+    margin-bottom: 10px;
+}
+
 @media all and (max-width: 600px) {
     .title_welcome {
         font-size: 2.5em;

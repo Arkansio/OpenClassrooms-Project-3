@@ -45,6 +45,21 @@ class Backend
         session_destroy();
         header('Location: /projet3');
     }
+
+    public function createPostPage($GET, $POST) {
+        if($this->isLogged()) {
+            if(isset($POST['create']))
+                $this->addNewPost($POST);  
+            else
+                require(APP_ROOT . 'app/views/createPost.php');
+        } else {
+            header('Location: /projet3/login/');
+        }
+    }
+
+    private function addNewPost($POST) {
+
+    }
 }
 
 ?>
