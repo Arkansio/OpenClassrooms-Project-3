@@ -59,7 +59,7 @@ class Backend
 
     private function createPost($title, $content) {
         $this->postManager->createPost($title, $content);
-        header('Location: /projet3/chapitres/chapitre/');
+        header('Location: /projet3/chapitres/');
     }
 }
 
