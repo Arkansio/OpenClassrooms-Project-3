@@ -5,6 +5,7 @@ class Front
 {
     private $postManager;
     function __construct() {
+        session_start();
         $this->postManager = new PostManager();
     }
     function home()
