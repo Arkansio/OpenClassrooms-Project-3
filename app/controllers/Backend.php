@@ -37,7 +37,7 @@ class Backend
         if($this->isLogged()) {
             require(APP_ROOT . 'app/views/admin.php');
         } else {
-            $this->showLogin();
+            header('Location: /projet3/login/');
         }
     }
 
