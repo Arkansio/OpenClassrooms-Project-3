@@ -10,7 +10,7 @@
     <?php while ($element = $data->fetch()): ?>
         <div class="col-md-4 chapter">
             <div class="card text-white bg-dark mw-100">
-                <div class="card-header"><?php echo $element['title']; ?></div>
+                <div class="card-header"><?php echo htmlspecialchars($element['title']); ?></div>
                 <div class="card-body">
                     <p class="card-text"><?php echo strip_tags($element['SUBSTRING(content, 1, 120)']); ?></p>
                     <a href="chapitre/?id=<?php echo $element['id']; ?>">
