@@ -24,7 +24,9 @@ $content = 'test';
         </div>
         <div class="col-4">
             <div class="basicForm">
-                <button type="button" class="btn btn-success">Créer un nouveau billet</button>
+                <a href="/projet3/admin/createPost/">
+                    <button type="button" class="btn btn-success">Créer un nouveau billet</button>
+                </a>
                 <button type="button" class="btn btn-info">Voir tous les billets</button>
             </div>
             <div class="basicForm bottom">
