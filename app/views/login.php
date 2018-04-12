@@ -1,7 +1,5 @@
 <?php
-$title = 'Chapitre';
-$chapterTitle = 'title';
-$content = 'test';
+$title = 'Login';
 ?>
 
 <?php ob_start(); ?>
