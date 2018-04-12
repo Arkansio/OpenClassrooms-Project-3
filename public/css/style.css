@@ -136,6 +136,33 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+div.container.admin {
+    margin-top: 60px;
+}
+
+div.container.admin .basicForm{
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+div.container.admin .basicForm button {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+div.container.admin .basicForm + div {
+    margin-top: 20px;
+}
+
+div.container.admin .basicForm .welcome {
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+}
+
 @media all and (max-width: 600px) {
     .title_welcome {
         font-size: 2.5em;

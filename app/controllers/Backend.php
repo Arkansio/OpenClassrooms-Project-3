@@ -28,6 +28,18 @@ class Backend
             $this->showLogin();
         }
     }
+
+    private function isLogged() {
+        return isset($_SESSION['isLogged']);
+    }
+
+    public function admin() {
+        if($this->isLogged()) {
+            require(APP_ROOT . 'app/views/admin.php');
+        } else {
+            $this->showLogin();
+        }
+    }
 }
 
 ?>
