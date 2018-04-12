@@ -28,6 +28,13 @@ class PostManager
         $req->execute();
         return $req->fetch();
     }
+
+    function createPost($title, $content) {
+        $this->initConnection();
+        $req = $this->bdd->prepare('INSERT INTO billets(title, content) VALUES(?, ?)');
+        $req->execute(array($title, $content));
+        return;
+    }
 }
 
 ?>

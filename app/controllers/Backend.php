@@ -48,8 +48,8 @@ class Backend
 
     public function createPostPage($GET, $POST) {
         if($this->isLogged()) {
-            if(isset($POST['create']))
-                $this->addNewPost($POST);  
+            if(isset($POST['content']) && isset($POST['title']))
+                $this->createPost($POST['title'], $POST['content']);
             else
                 require(APP_ROOT . 'app/views/createPost.php');
         } else {
@@ -57,8 +57,9 @@ class Backend
         }
     }
 
-    private function addNewPost($POST) {
-
+    private function createPost($title, $content) {
+        $this->postManager->createPost($title, $content);
+        header('Location: /projet3/chapitres/chapitre/');
     }
 }
 
