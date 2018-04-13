@@ -183,6 +183,10 @@ div.container.admin .basicForm .welcome {
     margin-bottom: 10px;
 }
 
+.listPosts {
+    padding: 10px;
+}
+
 @media all and (max-width: 600px) {
     .title_welcome {
         font-size: 2.5em;

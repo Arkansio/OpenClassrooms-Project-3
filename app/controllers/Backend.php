@@ -61,6 +61,15 @@ class Backend
         $this->postManager->createPost($title, $content);
         header('Location: /projet3/chapitres/');
     }
+
+    public function listPosts() {
+        if($this->isLogged()) {
+            $posts = $this->postManager->getPostsWithoutDesc();
+            require(APP_ROOT . 'app/views/listPosts.php');
+        } else {
+            header('Location: /projet3/login/');
+        }
+    }
 }
 
 ?>

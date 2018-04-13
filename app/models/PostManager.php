@@ -22,6 +22,13 @@ class PostManager
         return $req;
     }
 
+    function getPostsWithoutDesc() {
+        $this->initConnection();
+        $req = $this->bdd->prepare('SELECT id, title, date FROM billets ORDER BY date DESC');
+        $req->execute();
+        return $req;
+    }
+
     function countPosts() {
         $this->initConnection();
         $req = $this->bdd->prepare('SELECT COUNT(id) FROM billets');
