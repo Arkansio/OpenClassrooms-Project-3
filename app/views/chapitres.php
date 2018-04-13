@@ -7,20 +7,20 @@
 </div>
 
 <div class="row chapters animated fadeIn">
-    <?php while ($element = $data->fetch()): ?>
+    <?php foreach ($posts as $post): ?>
         <div class="col-md-6 chapter">
             <div class="card text-white bg-dark mw-100">
-                <div class="card-header"><?php echo htmlspecialchars($element['title']); ?></div>
+                <div class="card-header"><?php echo htmlspecialchars($post->title); ?></div>
                 <div class="card-body">
-                    <p class="card-text"><?php echo strip_tags($element['SUBSTRING(content, 1, 120)']); ?>...</p>
-                    <a href="chapitre/?id=<?php echo $element['id']; ?>">
+                    <p class="card-text"><?php echo strip_tags($post->content); ?>...</p>
+                    <a href="chapitre/?id=<?php echo $post->id ?>">
                         <button type="button" class="btn btn-outline-secondary">Lire</button>
                     </a>
-                    <p class="card-text date">  <?php echo $element['date']; ?> </p>
+                    <p class="card-text date">  <?php echo $post->date; ?> </p>
                 </div>
             </div>
         </div>
-    <?php endwhile; ?>
+    <?php endforeach; ?>
 </div>
 
 <div class="paginations animated slideInUp">

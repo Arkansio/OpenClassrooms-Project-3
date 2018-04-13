@@ -22,7 +22,12 @@ class PostManager
         $req->bindParam(1, $from, PDO::PARAM_INT);
         $req->bindParam(2, $to, PDO::PARAM_INT);
         $req->execute();
-        return $req;
+        $posts = array();
+        while ($element = $req->fetch()) {
+            $post = new Post($element['id'], $element['title'], $element['SUBSTRING(content, 1, 120)'], $element['date']);
+            array_push($posts, $post);
+        }
+        return $posts;
     }
 
     function getPostsWithoutDesc() {
