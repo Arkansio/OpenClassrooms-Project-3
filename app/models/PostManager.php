@@ -1,4 +1,6 @@
 <?php
+require(APP_ROOT . 'app/models/Post.php');
+
 class PostManager
 {
     private $bdd;
@@ -11,7 +13,8 @@ class PostManager
         $this->initConnection();
         $req = $this->bdd->prepare('SELECT * FROM billets WHERE id = ? LIMIT 1');
         $req->execute(array($id));
-        return $req->fetch();
+        $data = $req->fetch();
+        return new Post($data['id'], $data['title'], $data['content'], $data['date']);
     }
     function getPosts($from, $to) {
         $this->initConnection();
