@@ -27,7 +27,9 @@ $content = 'test';
                 <a href="/projet3/admin/createPost/">
                     <button type="button" class="btn btn-success">Créer un nouveau billet</button>
                 </a>
-                <button type="button" class="btn btn-info">Voir tous les billets</button>
+                <a href="/projet3/admin/listPosts/">
+                    <button type="button" class="btn btn-info">Voir tous les billets</button>
+                </a>
             </div>
             <div class="basicForm bottom">
                 <button type="button" class="btn btn-warning">Commentaires signalés</button>
