@@ -17,5 +17,6 @@
     <body>
         <?php require('header.php') ?>
         <?= $content ?>
+        <a href="/projet3/admin" class="adminLog">Admin</a>
     </body>
 </html>
