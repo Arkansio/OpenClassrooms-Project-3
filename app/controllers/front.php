@@ -26,7 +26,7 @@ class Front
 
     function chapitre($GET)
     {
-        $data = $this->postManager->getPostByID($GET['id']);
+        $post = $this->postManager->getPostByID($GET['id']);
         require(APP_ROOT . 'app/views/chapitre.php');
     }
 }
