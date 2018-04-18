@@ -55,6 +55,13 @@ class PostManager
         $req->execute(array($title, $content));
         return;
     }
+
+    function deletePost($id) {
+        $this->initConnection();
+        $req = $this->bdd->prepare('DELETE FROM BILLETS WHERE id = ?');
+        $req->execute(array($id));
+        return;
+    }
 }
 
 ?>

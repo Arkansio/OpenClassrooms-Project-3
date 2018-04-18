@@ -70,6 +70,14 @@ class Backend
             header('Location: ' . WEB_ROOT . 'login/');
         }
     }
+
+    public function deletePost($GET) {
+        if($this->isLogged()) {
+            if(isset($GET['id']))
+                $this->postManager->deletePost($GET['id']);
+        }
+        header('Location: ' . WEB_ROOT . 'admin/listPosts');
+    }
 }
 
 ?>
