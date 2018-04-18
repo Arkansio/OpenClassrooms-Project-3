@@ -34,7 +34,12 @@ class PostManager
         $this->initConnection();
         $req = $this->bdd->prepare('SELECT id, title, date FROM billets ORDER BY date DESC');
         $req->execute();
-        return $req;
+        $posts = array();
+        while ($element = $req->fetch()) {
+            $post = new Post($element['id'], $element['title'], null, $element['date']);
+            array_push($posts, $post);
+        }
+        return $posts;
     }
 
     function countPosts() {

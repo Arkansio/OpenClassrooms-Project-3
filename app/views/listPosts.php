@@ -17,14 +17,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php while ($post = $posts->fetch()): ?>
+            <?php foreach ($posts as $post): ?>
                 <tr>
-                    <th scope="row"><?php echo $post['id']; ?></th>
-                    <td><?php echo htmlspecialchars($post['title']); ?></td>
-                    <td><?php echo $post['date']; ?> </td>
+                    <th scope="row"><?php echo $post->id; ?></th>
+                    <td><?php echo htmlspecialchars($post->title); ?></td>
+                    <td><?php echo $post->date; ?> </td>
                     <td></td>
                 </tr>
-            <?php endwhile; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>
