@@ -26,9 +26,11 @@
                         <button type="button" class="btn btn-primary">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button type="button" class="btn btn-danger">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
+                        <a href="<?php echo WEB_ROOT ?>admin/deletePost?id=<?php echo $post->id; ?>">
+                            <button type="button" class="btn btn-danger">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
