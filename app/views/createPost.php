@@ -10,7 +10,7 @@ $title = 'Nouveau billet';
 
 
 <div class="container editor">
-    <form action="/projet3/admin/createPost/index.php" method="POST">
+    <form action="<?php echo WEB_ROOT ?>admin/createPost/index.php" method="POST">
         <input name="title" class="form-control title" placeholder="Titre du billet">
         <textarea name="content" id="" cols="30" rows="10"></textarea>
         <div class="submit">

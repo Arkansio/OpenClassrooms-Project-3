@@ -23,7 +23,7 @@ class Backend
     private function testLogin($password) {
         if($password === 'mdp') {
             $_SESSION['isLogged'] = 1;
-            header('Location: /projet3/admin');
+            header('Location: ' . WEB_ROOT . 'admin');
         } else {
             $this->showLogin();
         }
@@ -37,13 +37,13 @@ class Backend
         if($this->isLogged()) {
             require(APP_ROOT . 'app/views/admin.php');
         } else {
-            header('Location: /projet3/login/');
+            header('Location: ' . WEB_ROOT . 'login/');
         }
     }
 
     public function logout() {
         session_destroy();
-        header('Location: /projet3');
+        header('Location: ' . WEB_ROOT);
     }
 
     public function createPostPage($GET, $POST) {
@@ -53,13 +53,13 @@ class Backend
             else
                 require(APP_ROOT . 'app/views/createPost.php');
         } else {
-            header('Location: /projet3/login/');
+            header('Location: ' . WEB_ROOT . 'login/');
         }
     }
 
     private function createPost($title, $content) {
         $this->postManager->createPost($title, $content);
-        header('Location: /projet3/chapitres/');
+        header('Location: ' . WEB_ROOT . 'chapitres/');
     }
 
     public function listPosts() {
@@ -67,7 +67,7 @@ class Backend
             $posts = $this->postManager->getPostsWithoutDesc();
             require(APP_ROOT . 'app/views/listPosts.php');
         } else {
-            header('Location: /projet3/login/');
+            header('Location: ' . WEB_ROOT . 'login/');
         }
     }
 }

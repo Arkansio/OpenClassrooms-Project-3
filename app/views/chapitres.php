@@ -29,7 +29,7 @@
             <?php if ($i === $actualIndex + 1): ?>
                 <button type="button" class="btn btn-dark active"><?php echo $i ?></button>
             <?php else: ?>
-                <a href="/projet3/chapitres?i=<?php echo $i; ?>">
+                <a href="<?php echo WEB_ROOT ?>chapitres?i=<?php echo $i; ?>">
                     <button type="button" class="btn btn-dark"><?php echo $i ?></button>
                 </a>
             <?php endif; ?>

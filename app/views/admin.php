@@ -24,10 +24,10 @@ $content = 'test';
         </div>
         <div class="col-4">
             <div class="basicForm">
-                <a href="/projet3/admin/createPost/">
+                <a href="<?php echo WEB_ROOT ?>admin/createPost/">
                     <button type="button" class="btn btn-success">Créer un nouveau billet</button>
                 </a>
-                <a href="/projet3/admin/listPosts/">
+                <a href="<?php echo WEB_ROOT ?>admin/listPosts/">
                     <button type="button" class="btn btn-info">Voir tous les billets</button>
                 </a>
             </div>
@@ -36,7 +36,7 @@ $content = 'test';
                 <button type="button" class="btn btn-info">Tous les commentaires</button>
             </div>
             <div class="basicForm bottom">
-                <a href="/projet3/login/logout.php">
+                <a href="<?php echo WEB_ROOT ?>login/logout.php">
                     <button type="button" class="btn btn-danger">Déconnexion</button>
                 </a>
             </div>
