@@ -22,7 +22,14 @@
                     <th scope="row"><?php echo $post->id; ?></th>
                     <td><?php echo htmlspecialchars($post->title); ?></td>
                     <td><?php echo $post->date; ?> </td>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
