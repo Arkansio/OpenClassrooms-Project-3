@@ -1,6 +1,4 @@
 <?php
-require(APP_ROOT . 'app/models/Post.php');
-
 class PostManager
 {
     private $bdd;
@@ -60,6 +58,14 @@ class PostManager
         $this->initConnection();
         $req = $this->bdd->prepare('DELETE FROM BILLETS WHERE id = ?');
         $req->execute(array($id));
+        return;
+    }
+
+    function editPost($post) {
+        print_r($post);
+        $this->initConnection();
+        $req = $this->bdd->prepare('UPDATE BILLETS SET title = ?, content = ? WHERE id = ?');
+        $req->execute(array($post->title, $post->content, $post->id));
         return;
     }
 }

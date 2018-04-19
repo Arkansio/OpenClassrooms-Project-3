@@ -1,5 +1,6 @@
 <?php
 require(APP_ROOT . 'app/models/PostManager.php');
+require(APP_ROOT . 'app/models/Post.php');
 
 class Backend
 {
@@ -60,6 +61,34 @@ class Backend
     private function createPost($title, $content) {
         $this->postManager->createPost($title, $content);
         header('Location: ' . WEB_ROOT . 'chapitres/');
+    }
+
+    public function editPostPage($GET, $POST) {
+        if($this->isLogged()) {
+            if(isset($POST['content']) && isset($POST['title']) && isset($POST['id'])) {
+                $this->editPost($POST);
+            }
+            else {
+                $this->getEditPost($GET);
+            }
+        } else {
+            header('Location: ' . WEB_ROOT . 'login/');
+        }
+    }
+
+    private function editPost($POST) {
+        $editPost = new Post($POST['id'], $POST['title'], $POST['content'], null);
+        $this->postManager->editPost($editPost);
+        header('Location: ' . WEB_ROOT . 'admin/listPosts');
+    }
+
+    private function getEditPost($GET) {
+        if (isset($GET['id'])) {
+            $editPost = $this->postManager->getPostByID($GET['id']); 
+            require(APP_ROOT . 'app/views/editPost.php');
+        } else {
+            header('Location: ' . WEB_ROOT . 'admin/listPosts');
+        }
     }
 
     public function listPosts() {

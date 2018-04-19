@@ -23,9 +23,11 @@
                     <td><?php echo htmlspecialchars($post->title); ?></td>
                     <td><?php echo $post->date; ?> </td>
                     <td>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fas fa-edit"></i>
-                        </button>
+                        <a href="<?php echo WEB_ROOT ?>admin/editPost?id=<?php echo $post->id; ?>">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </a>
                         <a href="<?php echo WEB_ROOT ?>admin/deletePost?id=<?php echo $post->id; ?>">
                             <button type="button" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
