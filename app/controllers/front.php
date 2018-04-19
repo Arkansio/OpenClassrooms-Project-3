@@ -1,5 +1,6 @@
 <?php
 require(APP_ROOT . 'app/models/PostManager.php');
+require(APP_ROOT . 'app/models/Post.php');
 
 class Front
 {
