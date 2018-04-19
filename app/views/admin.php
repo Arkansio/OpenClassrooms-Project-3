@@ -1,7 +1,5 @@
 <?php
-$title = 'Chapitre';
-$chapterTitle = 'title';
-$content = 'test';
+$title = 'Interface d\'administration';
 ?>
 
 <?php ob_start(); ?>

@@ -1,4 +1,4 @@
-<?php $title = 'Chapitres' ?>
+<?php $title = 'Liste des posts' ?>
 
 <?php ob_start(); ?>
 
