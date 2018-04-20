@@ -19,6 +19,14 @@ class CommentManager
         }
         return $comments;
     }
+
+    function addComment($comment)
+    {
+        $this->initConnection();
+        $req = $this->bdd->prepare('INSERT INTO commentaires(postID, name, content) VALUES(?, ?, ?)');
+        $req->execute(array($comment->postID, $comment->name, $comment->content));
+        return;
+    }
 }
 
 ?>

@@ -35,6 +35,17 @@ class Front
         $comments = $this->commentManager->getCommentsByPostID($GET['id']);
         require(APP_ROOT . 'app/views/chapitre.php');
     }
+
+    function postComment($GET, $POST) {
+        if(isset($POST['name']) && isset($POST['content']) && isset($POST['postID'])) {
+            print_r($POST);
+            $comment = new Comment(null, $POST['postID'], $POST['name'], $POST['content'], null);
+            $this->commentManager->addComment($comment);
+            header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
+        } else {
+            
+        }
+    }
 }
 
 ?>

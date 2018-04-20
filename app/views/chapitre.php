@@ -16,6 +16,14 @@ $title = 'Chapitre';
 
     <div class="comments">
         <div class="title"> Commentaires </div>
+        <form action="<?php echo WEB_ROOT ?>chapitres/comment/" method="POST">
+            <div class="commentBox">
+                <input name="postID" type="hidden" value="<?php echo $post->id; ?>">
+                <input type="text" class="form-control" name="name" placeholder="Votre pseudonyme">
+                <textarea class="form-control" name="content" id="" rows="3"></textarea>
+                <button type="submit" class="btn btn-primary">Commenter</button>
+            </div>
+        </form>
         <?php foreach ($comments as $comment): ?>
             <div class="comment">
                 <div class="user"><?php echo htmlspecialchars($comment->name); ?></div>
