@@ -19,7 +19,7 @@
         <tbody>
             <?php foreach ($comments as $comment): ?>
                 <tr>
-                    <th scope="row"><?php echo $comment->name; ?></th>
+                    <th scope="row"><?php echo htmlspecialchars($comment->name); ?></th>
                     <td>
                         <?php echo htmlspecialchars($comment->content); ?>
                     </td>
