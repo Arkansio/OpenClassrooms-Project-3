@@ -53,6 +53,13 @@ class CommentManager
         $req->execute(array($id));
         return;
     }
+
+    function approveComment($id) {
+        $this->initConnection();
+        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 0');
+        $req->execute(array($id));
+        return;
+    }
 }
 
 ?>

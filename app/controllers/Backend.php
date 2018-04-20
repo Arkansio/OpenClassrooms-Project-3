@@ -130,6 +130,16 @@ class Backend
             header('Location: ' . WEB_ROOT . 'login/');
         }
     }
+
+    public function approveComment($GET) {
+        if($this->isLogged()) {
+            if(isset($GET['id']))
+                $comments = $this->commentManager->approveComment($GET['id']);
+                header('Location: ' . WEB_ROOT . 'admin/flagComments');
+        } else {
+            header('Location: ' . WEB_ROOT . 'login/');
+        }
+    }
 }
 
 ?>

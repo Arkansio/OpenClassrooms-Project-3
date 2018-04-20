@@ -25,7 +25,7 @@
                     </td>
                     <td><?php echo $comment->date; ?> </td>
                     <td>
-                        <a href="<?php echo WEB_ROOT ?>a<?php echo $comment->id; ?>">
+                        <a href="<?php echo WEB_ROOT ?>admin/flagComments/approve?id=<?php echo $comment->id; ?>">
                             <button type="button" class="btn btn-success">
                                 <i class="fas fa-check"></i>
                             </button>
