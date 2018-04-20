@@ -199,6 +199,14 @@ div.container.admin .basicForm .welcome {
     color: white;
 }
 
+.white {
+    color: white;
+}
+
+.white:hover {
+    color: white;
+}
+
 @media all and (max-width: 600px) {
     .title_welcome {
         font-size: 2.5em;

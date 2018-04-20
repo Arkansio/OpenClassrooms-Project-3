@@ -20,7 +20,11 @@
             <?php foreach ($posts as $post): ?>
                 <tr>
                     <th scope="row"><?php echo $post->id; ?></th>
-                    <td><?php echo htmlspecialchars($post->title); ?></td>
+                    <td>
+                        <a class="white" href="<?php echo WEB_ROOT ?>chapitres/chapitre?id=<?php echo $post->id; ?>">
+                            <?php echo htmlspecialchars($post->title); ?>
+                        </a>
+                    </td>
                     <td><?php echo $post->date; ?> </td>
                     <td>
                         <a href="<?php echo WEB_ROOT ?>admin/editPost?id=<?php echo $post->id; ?>">
