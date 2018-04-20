@@ -3,20 +3,23 @@ require(APP_ROOT . 'app/models/PostManager.php');
 require(APP_ROOT . 'app/models/Post.php');
 require(APP_ROOT . 'app/models/CommentManager.php');
 require(APP_ROOT . 'app/models/Comment.php');
+require(APP_ROOT . 'app/models/userManager.php');
 
 class Backend
 {
     private $postManager;
     private $commentManager;
+    private $userManager;
     function __construct() {
         session_start();
         $this->postManager = new PostManager();
         $this->commentManager = new CommentManager();
+        $this->userManager = new UserManager();
     }
     function login($GET, $POST)
     {
-        if(isset($POST['password']))
-            $this->testLogin($POST['password']);
+        if(isset($POST['password']) && isset($POST['username']))
+            $this->testLogin($POST['password'], $POST['username']);
         else
             $this->showLogin();
     }
@@ -25,8 +28,9 @@ class Backend
         require(APP_ROOT . 'app/views/login.php');
     }
 
-    private function testLogin($password) {
-        if($password === 'mdp') {
+    private function testLogin($username, $password) {
+        $isValid = $this->userManager->isUserValid($username, $password);
+        if($isValid) {
             $_SESSION['isLogged'] = 1;
             header('Location: ' . WEB_ROOT . 'admin');
         } else {
