@@ -34,6 +34,7 @@ $title = 'Chapitre';
                     <div class="date">
                         <?php echo htmlspecialchars($comment->date); ?>
                     </div>
+                    <a class="flag" href="<?php echo WEB_ROOT ?>chapitres/flagComment?id=<?php echo $comment->id; ?>">Signaler<a/>
                 </div>
             </div>
 

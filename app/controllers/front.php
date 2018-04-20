@@ -45,6 +45,13 @@ class Front
             header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
         }
     }
+
+    function flagComment($GET) {
+        if(isset($GET['id'])) {
+            $this->commentManager->flagComment($GET['id']);
+        }
+        header('Location: ' . WEB_ROOT . 'chapitres');
+    }
 }
 
 ?>
