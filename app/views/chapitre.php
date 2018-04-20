@@ -28,7 +28,7 @@ $title = 'Chapitre';
             <div class="comment">
                 <div class="user"><?php echo htmlspecialchars($comment->name); ?></div>
                 <div class="content">
-                    <?php echo htmlspecialchars($comment->content); ?>
+                    <?php echo nl2br(htmlspecialchars($comment->content)); ?>
                 </div>
                 <div class="dateContainer">
                     <div class="date">
