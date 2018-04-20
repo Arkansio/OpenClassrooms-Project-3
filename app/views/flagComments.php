@@ -1,9 +1,9 @@
-<?php $title = 'Liste des posts' ?>
+<?php $title = 'Liste des commentaires signalés' ?>
 
 <?php ob_start(); ?>
 
 <div class="title_left animated bounceInLeft">
-    Liste des posts
+    Liste des commentaires signalés
 </div>
 
 <div class="listPosts container animated fadeIn">
@@ -21,9 +21,7 @@
                 <tr>
                     <th scope="row"><?php echo $comment->name; ?></th>
                     <td>
-                        <a class="white" href="<?php echo WEB_ROOT ?>chapitres/chapitre?id=<?php echo $post->id; ?>">
-                            <?php echo htmlspecialchars($comment->content); ?>
-                        </a>
+                        <?php echo htmlspecialchars($comment->content); ?>
                     </td>
                     <td><?php echo $comment->date; ?> </td>
                     <td>
