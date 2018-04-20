@@ -10,7 +10,7 @@ class CommentManager
     function getCommentsByPostID($PostID)
     {
         $this->initConnection();
-        $req = $this->bdd->prepare('SELECT * FROM commentaires WHERE postID = ?');
+        $req = $this->bdd->prepare('SELECT * FROM commentaires WHERE postID = ? ORDER BY date DESC');
         $req->execute(array($PostID));
         $comments = array();
         while ($element = $req->fetch()) {
