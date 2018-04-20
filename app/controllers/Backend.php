@@ -67,7 +67,8 @@ class Backend
     }
 
     private function createPost($title, $content) {
-        $this->postManager->createPost($title, $content);
+        $newPost = new Post(null, $title, $content, null);
+        $this->postManager->createPost($newPost);
         header('Location: ' . WEB_ROOT . 'chapitres/');
     }
 
