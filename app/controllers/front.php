@@ -42,7 +42,7 @@ class Front
             $this->commentManager->addComment($comment);
             header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
         } else {
-            
+            header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
         }
     }
 }
