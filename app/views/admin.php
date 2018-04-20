@@ -10,7 +10,7 @@ $title = 'Interface d\'administration';
 
 <div class="container admin">
     <div class="row">
-        <div class="col-8">
+        <div class="col-lg-8">
             <div class="basicForm">
                 <h4>Bienvenue sur votre panel d'administration</h1>
                 <p class="welcome">
@@ -20,7 +20,7 @@ $title = 'Interface d\'administration';
                 </script></p>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4">
             <div class="basicForm">
                 <a href="<?php echo WEB_ROOT ?>admin/createPost/">
                     <button type="button" class="btn btn-success">Créer un nouveau billet</button>
