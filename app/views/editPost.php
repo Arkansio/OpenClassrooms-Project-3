@@ -13,7 +13,7 @@ $title = 'Nouveau billet';
     <form action="<?php echo WEB_ROOT ?>admin/editPost/index.php" method="POST">
         <input name="id" type="hidden" value="<?php echo $editPost->id; ?>">
         <input name="title" class="form-control title" placeholder="Titre du billet" value="<?php echo $editPost->title; ?>">
-        <textarea name="content" id="" cols="30" rows="10"><?php echo $editPost->content; ?></textarea>
+        <textarea name="content" id="editor" cols="30" rows="10"><?php echo $editPost->content; ?></textarea>
         <div class="submit">
             <button type="submit" class="btn btn-primary">Modifier</button>
         </div>
