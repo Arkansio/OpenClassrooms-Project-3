@@ -10,7 +10,7 @@ $title = 'Login';
     <form action="<?php echo WEB_ROOT ?>login/index.php" method="post">
         <div class="form-group">
             <label for="username">Nom d'utilisateur</label>
-            <input name="username" type="text" class="form-control" placeholder="Mot de passe">
+            <input name="username" type="text" class="form-control" placeholder="Nom d'utilisateur">
             <label for="password">Mot de passe</label>
             <input name="password" type="password" class="form-control" id="password" placeholder="Mot de passe">
         </div>
