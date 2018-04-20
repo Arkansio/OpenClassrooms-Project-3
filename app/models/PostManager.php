@@ -62,7 +62,6 @@ class PostManager
     }
 
     function editPost($post) {
-        print_r($post);
         $this->initConnection();
         $req = $this->bdd->prepare('UPDATE BILLETS SET title = ?, content = ? WHERE id = ?');
         $req->execute(array($post->title, $post->content, $post->id));
