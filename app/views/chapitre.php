@@ -16,21 +16,20 @@ $title = 'Chapitre';
 
     <div class="comments">
         <div class="title"> Commentaires </div>
-        <?php for ($i = 1; $i <= 6; $i++): ?>
-
+        <?php foreach ($comments as $comment): ?>
             <div class="comment">
-                <div class="user">Marco</div>
+                <div class="user"><?php echo htmlspecialchars($comment->name); ?></div>
                 <div class="content">
-                    commentaire de billet
+                    <?php echo htmlspecialchars($comment->content); ?>
                 </div>
                 <div class="dateContainer">
                     <div class="date">
-                        Posté le 2017-07-20
+                        <?php echo htmlspecialchars($comment->date); ?>
                     </div>
                 </div>
             </div>
 
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 

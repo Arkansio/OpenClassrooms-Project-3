@@ -1,13 +1,17 @@
 <?php
 require(APP_ROOT . 'app/models/PostManager.php');
 require(APP_ROOT . 'app/models/Post.php');
+require(APP_ROOT . 'app/models/CommentManager.php');
+require(APP_ROOT . 'app/models/Comment.php');
 
 class Front
 {
     private $postManager;
+    private $commentManager;
     function __construct() {
         session_start();
         $this->postManager = new PostManager();
+        $this->commentManager = new CommentManager();
     }
     function home()
     {
@@ -28,6 +32,7 @@ class Front
     function chapitre($GET)
     {
         $post = $this->postManager->getPostByID($GET['id']);
+        $comments = $this->commentManager->getCommentsByPostID($GET['id']);
         require(APP_ROOT . 'app/views/chapitre.php');
     }
 }
