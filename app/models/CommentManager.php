@@ -39,6 +39,13 @@ class CommentManager
         }
         return $comments;
     }
+
+    function deleteComment($id) {
+        $this->initConnection();
+        $req = $this->bdd->prepare('DELETE FROM commentaires WHERE id = ?');
+        $req->execute(array($id));
+        return;
+    }
 }
 
 ?>

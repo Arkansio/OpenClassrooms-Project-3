@@ -120,6 +120,16 @@ class Backend
             header('Location: ' . WEB_ROOT . 'login/');
         }
     }
+
+    public function deleteComment($GET) {
+        if($this->isLogged()) {
+            if(isset($GET['id']))
+                $comments = $this->commentManager->deleteComment($GET['id']);
+                header('Location: ' . WEB_ROOT . 'admin/flagComments');
+        } else {
+            header('Location: ' . WEB_ROOT . 'login/');
+        }
+    }
 }
 
 ?>
