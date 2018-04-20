@@ -27,6 +27,18 @@ class CommentManager
         $req->execute(array($comment->postID, $comment->name, $comment->content));
         return;
     }
+
+    function getFlagComments() {
+        $this->initConnection();
+        $req = $this->bdd->prepare('SELECT * FROM commentaires WHERE flag = 1');
+        $req->execute();
+        $comments = array();
+        while ($element = $req->fetch()) {
+            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], $element['date']);
+            array_push($comments, $comment);
+        }
+        return $comments;
+    }
 }
 
 ?>

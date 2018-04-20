@@ -1,13 +1,17 @@
 <?php
 require(APP_ROOT . 'app/models/PostManager.php');
 require(APP_ROOT . 'app/models/Post.php');
+require(APP_ROOT . 'app/models/CommentManager.php');
+require(APP_ROOT . 'app/models/Comment.php');
 
 class Backend
 {
     private $postManager;
+    private $commentManager;
     function __construct() {
         session_start();
         $this->postManager = new PostManager();
+        $this->commentManager = new CommentManager();
     }
     function login($GET, $POST)
     {
@@ -106,6 +110,15 @@ class Backend
                 $this->postManager->deletePost($GET['id']);
         }
         header('Location: ' . WEB_ROOT . 'admin/listPosts');
+    }
+
+    public function flagComments($GET, $POST) {
+        if($this->isLogged()) {
+            $comments = $this->commentManager->getFlagComments();
+            require(APP_ROOT . 'app/views/flagComments.php');
+        } else {
+            header('Location: ' . WEB_ROOT . 'login/');
+        }
     }
 }
 

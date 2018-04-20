@@ -30,7 +30,9 @@ $title = 'Interface d\'administration';
                 </a>
             </div>
             <div class="basicForm bottom">
-                <button type="button" class="btn btn-warning">Commentaires signalés</button>
+                <a href="<?php echo WEB_ROOT ?>admin/flagComments/">
+                    <button type="button" class="btn btn-warning">Commentaires signalés</button>
+                </a>
                 <button type="button" class="btn btn-info">Tous les commentaires</button>
             </div>
             <div class="basicForm bottom">
