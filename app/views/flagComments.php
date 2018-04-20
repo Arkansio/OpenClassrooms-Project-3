@@ -30,11 +30,6 @@
                                 <i class="fas fa-check"></i>
                             </button>
                         </a>
-                        <a href="">
-                            <button type="button" class="btn btn-primary">
-                                <i class="fas fa-edit"></i>
-                            </button>
-                        </a>
                         <a href="<?php echo WEB_ROOT ?>admin/deleteComment?id=<?php echo $comment->id; ?>">
                             <button type="button" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
