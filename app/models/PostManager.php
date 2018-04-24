@@ -12,7 +12,7 @@ class PostManager
         $req = $this->bdd->prepare('SELECT * FROM billets WHERE id = ? LIMIT 1');
         $req->execute(array($id));
         $data = $req->fetch();
-        return new Post($data['id'], $data['title'], $data['content'], $data['date']);
+        return new Post($data['id'], $data['title'], $data['content'], date("d-m-Y H:i", strtotime($data['date'])));
     }
     function getPosts($from, $to) {
         $this->initConnection();
@@ -22,7 +22,7 @@ class PostManager
         $req->execute();
         $posts = array();
         while ($element = $req->fetch()) {
-            $post = new Post($element['id'], $element['title'], $element['SUBSTRING(content, 1, 120)'], $element['date']);
+            $post = new Post($element['id'], $element['title'], $element['SUBSTRING(content, 1, 120)'], date("d-m-Y H:i", strtotime($element['date'])));
             array_push($posts, $post);
         }
         return $posts;
@@ -34,7 +34,7 @@ class PostManager
         $req->execute();
         $posts = array();
         while ($element = $req->fetch()) {
-            $post = new Post($element['id'], $element['title'], null, $element['date']);
+            $post = new Post($element['id'], $element['title'], null, date("d-m-Y H:i", strtotime($element['date'])));
             array_push($posts, $post);
         }
         return $posts;

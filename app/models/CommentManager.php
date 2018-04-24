@@ -14,7 +14,7 @@ class CommentManager
         $req->execute(array($PostID));
         $comments = array();
         while ($element = $req->fetch()) {
-            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], $element['date']);
+            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], date("d-m-Y H:i", strtotime($element['date'])));
             array_push($comments, $comment);
         }
         return $comments;
@@ -34,7 +34,7 @@ class CommentManager
         $req->execute();
         $comments = array();
         while ($element = $req->fetch()) {
-            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], $element['date']);
+            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], date("d-m-Y H:i", strtotime($element['date'])));
             array_push($comments, $comment);
         }
         return $comments;
