@@ -16,7 +16,7 @@ $title = 'Chapitre';
 
     <div class="comments">
         <div class="title"> Commentaires </div>
-        <form action="<?php echo WEB_ROOT ?>chapitres/comment/" method="POST">
+        <form action="<?php echo WEB_ROOT ?>chapitres/comment/" method="POST" onsubmit="return testComment()" >
             <div class="commentBox">
                 <input name="postID" type="hidden" value="<?php echo $post->id; ?>">
                 <input type="text" class="form-control" name="name" placeholder="Votre pseudonyme">
