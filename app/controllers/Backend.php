@@ -109,6 +109,15 @@ class Backend
         }
     }
 
+    public function listComments() {
+        if($this->isLogged()) {
+            $comments = $this->commentManager->getComments();
+            require(APP_ROOT . 'app/views/listComments.php');
+        } else {
+            header('Location: ' . WEB_ROOT . 'login/');
+        }
+    }
+
     public function deletePost($GET) {
         if($this->isLogged()) {
             if(isset($GET['id']))
@@ -130,7 +139,7 @@ class Backend
         if($this->isLogged()) {
             if(isset($GET['id']))
                 $comments = $this->commentManager->deleteComment($GET['id']);
-                header('Location: ' . WEB_ROOT . 'admin/flagComments');
+                header('Location: ' . $_SERVER['HTTP_REFERER']);
         } else {
             header('Location: ' . WEB_ROOT . 'login/');
         }

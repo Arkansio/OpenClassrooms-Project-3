@@ -20,6 +20,18 @@ class CommentManager
         return $comments;
     }
 
+    function getComments() {
+        $this->initConnection();
+        $req = $this->bdd->prepare('SELECT * FROM commentaires ORDER BY date DESC');
+        $req->execute();
+        $comments = array();
+        while ($element = $req->fetch()) {
+            $comment = new Comment($element['id'], $element['postID'], $element['name'], $element['content'], date("d-m-Y H:i", strtotime($element['date'])));
+            array_push($comments, $comment);
+        }
+        return $comments;
+    }
+
     function addComment($comment)
     {
         $this->initConnection();
