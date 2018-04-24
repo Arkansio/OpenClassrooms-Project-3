@@ -49,14 +49,14 @@ class CommentManager
 
     function flagComment($id) {
         $this->initConnection();
-        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 1');
+        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 1 WHERE id = ?');
         $req->execute(array($id));
         return;
     }
 
     function approveComment($id) {
         $this->initConnection();
-        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 0');
+        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 0 WHERE id = ?');
         $req->execute(array($id));
         return;
     }
