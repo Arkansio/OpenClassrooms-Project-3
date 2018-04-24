@@ -39,11 +39,21 @@ class Front
     function postComment($GET, $POST) {
         if(isset($POST['name']) && isset($POST['content']) && isset($POST['postID'])) {
             $comment = new Comment(null, $POST['postID'], $POST['name'], $POST['content'], null);
-            $this->commentManager->addComment($comment);
-            header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
-        } else {
-            header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
+            if ($this->testComment($comment))
+                $this->commentManager->addComment($comment); 
+            print($this->testComment($comment));
         }
+        header('Location: ' . WEB_ROOT . 'chapitres/chapitre?id=' . $POST['postID']);
+    }
+
+    public function testComment($comment) {
+        $content = $comment->content;
+        $name = $comment->name;
+        if(!(strlen($content) > 10 && strlen($content) < 1000))
+            return false;
+        if(!(strlen($name) > 5 && strlen($name) < 20))
+            return false;
+        return true;
     }
 
     function flagComment($GET) {
