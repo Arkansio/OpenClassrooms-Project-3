@@ -33,7 +33,9 @@ $title = 'Interface d\'administration';
                 <a href="<?php echo WEB_ROOT ?>admin/flagComments/">
                     <button type="button" class="btn btn-warning">Commentaires signalés</button>
                 </a>
-                <button type="button" class="btn btn-info">Tous les commentaires</button>
+                <a href="<?php echo WEB_ROOT ?>admin/listComments/">
+                    <button type="button" class="btn btn-info">Tous les commentaires</button>
+                </a>
             </div>
             <div class="basicForm bottom">
                 <a href="<?php echo WEB_ROOT ?>login/logout.php">
