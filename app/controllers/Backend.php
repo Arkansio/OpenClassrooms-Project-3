@@ -29,6 +29,7 @@ class Backend
     }
 
     private function testLogin($username, $password) {
+        $password = hash('sha256', $password);
         $isValid = $this->userManager->isUserValid($username, $password);
         if($isValid) {
             $_SESSION['isLogged'] = 1;
