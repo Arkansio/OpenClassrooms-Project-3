@@ -30,7 +30,7 @@
                                 <i class="fas fa-check"></i>
                             </button>
                         </a>
-                        <a href="<?php echo WEB_ROOT ?>admin/deleteComment?id=<?php echo $comment->id; ?>">
+                        <a href="<?php echo WEB_ROOT ?>admin/deleteComment?id=<?php echo $comment->id; ?>" onclick="return confirmDeletion();">
                             <button type="button" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </button>

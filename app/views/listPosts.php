@@ -32,7 +32,7 @@
                                 <i class="fas fa-edit"></i>
                             </button>
                         </a>
-                        <a href="<?php echo WEB_ROOT ?>admin/deletePost?id=<?php echo $post->id; ?>">
+                        <a href="<?php echo WEB_ROOT ?>admin/deletePost?id=<?php echo $post->id; ?>" onclick="return confirmDeletion();">
                             <button type="button" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
