@@ -1,9 +1,9 @@
 <?php
-require(APP_ROOT . 'app/models/PostManager.php');
-require(APP_ROOT . 'app/models/Post.php');
-require(APP_ROOT . 'app/models/CommentManager.php');
-require(APP_ROOT . 'app/models/Comment.php');
-require(APP_ROOT . 'app/models/userManager.php');
+include_once(APP_ROOT . 'app/models/PostManager.php');
+include_once(APP_ROOT . 'app/models/Post.php');
+include_once(APP_ROOT . 'app/models/CommentManager.php');
+include_once(APP_ROOT . 'app/models/Comment.php');
+include_once(APP_ROOT . 'app/models/userManager.php');
 
 class Backend
 {

@@ -1,7 +1,7 @@
 <?php
 require('config.php');
-require(APP_ROOT . 'app/controllers/front.php');
+require(APP_ROOT . 'app/controllers/RouterInit.php');
 
-$front = new front;
-$front->home();
+$routerInit = new RouterInit();
+$routerInit->init();
 ?>

@@ -38,7 +38,7 @@ $title = 'Interface d\'administration';
                 </a>
             </div>
             <div class="basicForm bottom">
-                <a href="<?php echo WEB_ROOT ?>login/logout.php">
+                <a href="<?php echo WEB_ROOT ?>logout/">
                     <button type="button" class="btn btn-danger">Déconnexion</button>
                 </a>
             </div>

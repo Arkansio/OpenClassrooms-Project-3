@@ -7,7 +7,7 @@ $title = 'Login';
 <div class="title_left animated bounceInLeft">Connexion</div>
 
 <div class="login">
-    <form action="<?php echo WEB_ROOT ?>login/index.php" method="post">
+    <form action="<?php echo WEB_ROOT ?>login/" method="post">
         <div class="form-group">
             <label for="username">Nom d'utilisateur</label>
             <input name="username" type="text" class="form-control" placeholder="Nom d'utilisateur">
