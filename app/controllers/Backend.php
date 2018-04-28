@@ -3,7 +3,7 @@ include_once(APP_ROOT . 'app/models/PostManager.php');
 include_once(APP_ROOT . 'app/models/Post.php');
 include_once(APP_ROOT . 'app/models/CommentManager.php');
 include_once(APP_ROOT . 'app/models/Comment.php');
-include_once(APP_ROOT . 'app/models/userManager.php');
+include_once(APP_ROOT . 'app/models/UserManager.php');
 
 class Backend
 {
