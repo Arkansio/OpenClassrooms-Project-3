@@ -5,7 +5,7 @@ class UserManager
     private $bdd;
     function initConnection() {
         if (!$this->bdd)
-            $this->bdd = new PDO('mysql:host=localhost;dbname=b_alaska;charset=utf8', 'root', '');
+            $this->bdd = new PDO('mysql:host=' . BDD_HOST . ';dbname=' . BDD_NAME . ';charset=utf8', BDD_USER, BDD_PASSWORD);
     }
     function isUserValid($username, $password)
     {
