@@ -13,7 +13,7 @@
                 <div class="card-header"><?php echo htmlspecialchars($post->title); ?></div>
                 <div class="card-body">
                     <p class="card-text"><?php echo strip_tags($post->content); ?>...</p>
-                    <a href="chapitre/?id=<?php echo $post->id ?>">
+                    <a href="<?php echo WEB_ROOT ?>chapitres/chapitre/?id=<?php echo $post->id ?>">
                         <button type="button" class="btn btn-outline-secondary">Lire</button>
                     </a>
                     <p class="card-text date">  <?php echo $post->date; ?> </p>
