@@ -10,8 +10,9 @@
 </div>
 
 <div class="btn_group">
-    <button type="button" class="btn btn-outline-secondary"><span>Découvrir l'aventure</span></button>
-    <button type="button" class="btn btn-outline-secondary"><span>Dernier chapitre</span></button>
+    <a href="<?php echo WEB_ROOT ?>chapitres">
+        <button type="button" class="btn btn-outline-secondary"><span>Commencer l'aventure</span></button>
+    </a>
 </div>
 
 <?php $content = ob_get_clean(); ?>
