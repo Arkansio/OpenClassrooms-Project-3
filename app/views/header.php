@@ -11,9 +11,6 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo WEB_ROOT ?>chapitres">Les chapitres</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">L'auteur</a>
-      </li>
     </ul>
     <span class="navbar-text">
       Jean Forteroche
