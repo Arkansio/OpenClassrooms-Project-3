@@ -56,14 +56,14 @@ class PostManager
 
     function deletePost($id) {
         $this->initConnection();
-        $req = $this->bdd->prepare('DELETE FROM BILLETS WHERE id = ?');
+        $req = $this->bdd->prepare('DELETE FROM billets WHERE id = ?');
         $req->execute(array($id));
         return;
     }
 
     function editPost($post) {
         $this->initConnection();
-        $req = $this->bdd->prepare('UPDATE BILLETS SET title = ?, content = ? WHERE id = ?');
+        $req = $this->bdd->prepare('UPDATE billets SET title = ?, content = ? WHERE id = ?');
         $req->execute(array($post->title, $post->content, $post->id));
         return;
     }
