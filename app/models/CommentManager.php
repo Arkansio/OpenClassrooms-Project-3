@@ -42,7 +42,7 @@ class CommentManager
 
     function getFlagComments() {
         $this->initConnection();
-        $req = $this->bdd->prepare('SELECT * FROM commentaires WHERE flag = 1');
+        $req = $this->bdd->prepare('SELECT * FROM commentaires WHERE flag = 1 AND approve = 0');
         $req->execute();
         $comments = array();
         while ($element = $req->fetch()) {
@@ -68,7 +68,7 @@ class CommentManager
 
     function approveComment($id) {
         $this->initConnection();
-        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 0 WHERE id = ?');
+        $req = $this->bdd->prepare('UPDATE commentaires SET flag = 0, approve = 1 WHERE id = ?');
         $req->execute(array($id));
         return;
     }
